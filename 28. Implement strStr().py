@@ -1,10 +1,8 @@
 def ifSubSTR (a,b) :
-    if len(a) < len(b) :
+    if a[:len(b):] == b :
+        return True
+    else :
         return False
-    for i in range(len(b)) :
-        if a[i] != b[i] :
-            return False
-    return True
 
 def sol (haystack: str, needle: str) :
 
