@@ -1,28 +1,22 @@
 def find_max_sum (l) :
-    print(l)
+    _sum = l[0] 
+    _max = l[0]
 
-    # if base case
-    _len = len(l)
-    if _len == 1 :
-        return l[0]
-    
-    # find mid
-    mid_index = _len // 2
+    for i in range(1,len(l)) :
+        
+        if _sum < 0 :
+            _sum = l[i] 
+        else :
+            _sum = _sum + l[i]
+        
+        if _max < _sum :
+            _max = _sum 
 
-    # devide
-    left = find_max_sum(l[:mid_index:])
-    right = find_max_sum(l[mid_index::])
-
-    # councur
-    
-    print("concur -> {}".format( [left,left+right,right] ))
-    return max([left,left+right,right])
-
+    return _max
 
 def sol (nums) :
    return find_max_sum(nums)
     
-
 if __name__ == "__main__" :
     n = list(map(int,input().strip('[]').split(',')))
     # print(n)
