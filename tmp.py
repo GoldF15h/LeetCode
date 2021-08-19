@@ -1,14 +1,10 @@
-import keyboard
-import time
-import pyautogui
+columnNumber = int(input())
 
-print('RUNNING')
-while True :
-
-    if keyboard.is_pressed('q') :
-        break
-    
-    time.sleep(0.01)
-    pyautogui.typewrite('aaaaaaaaaa')
-
-print('END')
+stack = []
+while columnNumber > 0:
+    remain = columnNumber % 26
+    stack.append(chr(ord('A') + remain - 1) if remain else 'Z')
+    if not remain: 
+        columnNumber -= 26
+    columnNumber //= 26
+print(stack)
