@@ -22,7 +22,8 @@ def sol (n) :
 
         cur += 2
 
-    print(five,two)
+    # print(five,two)
+    return min(five,two)
     
 if __name__ == "__main__" :
     n = int(input())
