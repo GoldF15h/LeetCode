@@ -1,2 +1,2 @@
-x=[1,2,3]
-print( x[1:1] )
+x = "asd asd asd ss"
+print(x.split())
