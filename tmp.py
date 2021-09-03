@@ -1,2 +1,3 @@
 x = "GGsdf"
-print(x.isupper())
+if None :
+    print(x)
